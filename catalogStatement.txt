@@ -1,0 +1,30 @@
+fe
+ -- bin : 本地服务器启动器
+ -- config : 本地打包、环境的配置
+ -- public : 公共静态资源
+ -- server : 本地服务器配置
+ -- src : 业务逻辑
+    -- components : 公共组件(比如头部导航栏之类)
+    -- containers : 项目容器(提供Provider)
+    -- layouts : 公共容器组件
+    -- routes : 路由
+        -- */*/components : UI组件
+        -- */*/container : 容器组件[一个子路由只有一个]
+        -- */*/modules : actions和reducer的定义地
+        -- */*/combine : 将动作与state数据绑定到容器组件上
+        -- */*/index.js : 设置路由或export容器组件
+    -- store : redux的store生成地
+    -- styles : 样式
+ -- main.js : 入口文件，将根组件映射到DOM上
+ -- index.html : 单页面的html
+
+
+
+本项目是基于：https://github.com/davezuko/react-redux-starter-kit。
+扩展点：
+    1. 支持多路由了
+    2. 数据结构从基本类型改为引用类型
+    3. 修改routes下的文件夹结构
+        1. 将containers -> combine ,本来内部的js是将动作、数据用connect绑定到了组件上，所以更改为combine
+        2. 将modules文件夹下的action和reducer分离开为两个文件,避免state过于复杂时，modules单js文件过于复杂而难于维护
+        3. 添加container文件夹，用来装容器组件[一个子路由只有一个]

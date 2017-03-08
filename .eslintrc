@@ -1,22 +1,27 @@
 {
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "plugins": [
+    "babel",
+    "react",
+    "promise"
+  ],
   "env": {
-    "browser": true,
-    "node": true
-  },
-  ecmaFeatures: {
-    jsx: true
+    "browser" : true
   },
   "globals": {
-    "window": true,
-    "document": true
+    "__DEV__"      : false,
+    "__TEST__"     : false,
+    "__PROD__"     : false,
+    "__COVERAGE__" : false
   },
-  "plugins": [
-  ],
-  "extends": "eslint-config-airbnb",
   "rules": {
-    "comma-dangle": 0,
-    "no-console": 0,
-    "id-length": 0,
-    "react/prop-types": 0
+    "key-spacing"          : 0,
+    "jsx-quotes"           : [2, "prefer-single"],
+    "max-len"              : [2, 120, 2],
+    "object-curly-spacing" : [2, "always"]
   }
 }
