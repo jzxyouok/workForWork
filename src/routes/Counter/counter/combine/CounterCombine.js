@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { increment, doubleAsync } from '../modules/counter'
+import { increment, doubleAsync } from '../modules/actions'
 import Counter from '../components/Counter'
 
 
