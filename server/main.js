@@ -1,4 +1,4 @@
-const Koa = require('koa')
+const Express = require('express')
 const debug = require('debug')('app:server')
 const path = require('path')
 const webpack = require('webpack')
@@ -6,7 +6,7 @@ const webpackConfig = require('../config/webpack.config')
 const project = require('../config/project.config')
 const compress = require('compression')
 
-const app = Koa()
+const app = Express()
 
 // Apply gzip compression
 app.use(compress())
