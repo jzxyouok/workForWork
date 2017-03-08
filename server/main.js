@@ -1,4 +1,4 @@
-const Express = require('express')
+const express = require('express')
 const debug = require('debug')('app:server')
 const path = require('path')
 const webpack = require('webpack')
@@ -6,7 +6,7 @@ const webpackConfig = require('../config/webpack.config')
 const project = require('../config/project.config')
 const compress = require('compression')
 
-const app = Express()
+const app = express()
 
 // Apply gzip compression
 app.use(compress())
